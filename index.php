@@ -67,21 +67,41 @@
         <h2>Compétences</h2>
          <div class="skills-list">
              <div id="tooltip" role="tooltip"></div>
-                <span data-tooltip="Retouche photo et création visuelle">Photoshop</span>
+                <span class="skill" data-tooltip="Retouche photo et création visuelle">
+                    Photoshop
+                </span>
 
-                <span class="skill" data-tooltip="Création vectorielle et logos">
+                <span class="skill" data-tooltip="Création vectorielle, logos et illustrations">
                     Illustrator
                 </span>
 
-                <span class="skill" data-tooltip="UI/UX et prototypage">
+                <span class="skill" data-tooltip="UI/UX design, maquettes et prototypage">
                     Figma
                 </span>
-                <span>Indesign</span>
-                <span>After Effect</span>
-                <span>Adobe Audition</span>
-                <span>HTML/CSS</span>
-                <span>CMS</span>
-                <span>Procreate</span>
+
+                <span class="skill" data-tooltip="Mise en page éditoriale et supports imprimés">
+                    Indesign
+                </span>
+
+                <span class="skill" data-tooltip="Animation, motion design et effets visuels">
+                    After Effect
+                </span>
+
+                <span class="skill" data-tooltip="Montage et traitement audio professionnel">
+                    Adobe Audition
+                </span>
+
+                <span class="skill" data-tooltip="Création et intégration de sites web">
+                    HTML/CSS
+                </span>
+
+                <span class="skill" data-tooltip="Gestion et administration de contenu web">
+                    CMS
+                </span>
+
+                <span class="skill" data-tooltip="Illustration digitale et dessin sur tablette">
+                    Procreate
+                </span>
             </div>
     </section>
 

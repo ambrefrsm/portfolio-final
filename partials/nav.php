@@ -6,7 +6,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/portfolio-ambre/assets/style.css">
+    <link rel="stylesheet" href="build/style.css">
 </head>
 <body>
 
