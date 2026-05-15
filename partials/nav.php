@@ -6,6 +6,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+
     <link rel="stylesheet" href="build/style.css">
 </head>
 <body>
@@ -16,10 +17,10 @@
     </a>
 
     <nav class="menu">
-        <a href="#home" class="nav-link active">Accueil</a>
-        <a href="#about" class="nav-link">Présentation</a>
-        <a href="#skills" class="nav-link">Compétences</a>
-        <a href="#projects" class="nav-link">Projets</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="index.php#home" class="nav-link">Accueil</a>
+        <a href="index.php#about" class="nav-link">Présentation</a>
+        <a href="index.php#skills" class="nav-link">Compétences</a>
+        <a href="index.php#projects" class="nav-link">Projets</a>
+        <a href="index.php#contact" class="nav-link">Contact</a>
     </nav>
 </header>

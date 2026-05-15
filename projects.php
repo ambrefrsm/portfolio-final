@@ -29,6 +29,7 @@ $projects = $reqProjects->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <section class="projects all-projects" id="projects">
+
     <h2>PROJETS</h2>
 
     <div class="project-filters">

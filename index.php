@@ -135,7 +135,7 @@
 
    $projects = $reqProjects->fetchAll(PDO::FETCH_ASSOC);
    ?>
-   <section class="projects" id="projects">
+   <section class="projects home-projects" id="projects">
        <h2>PROJETS</h2>
 
        <div class="project-filters">
@@ -155,7 +155,6 @@
            <?php foreach ($projects as $project): ?>
                <article class="project-card">
                    <img src="images/<?= htmlspecialchars($project['cover']) ?>" alt="<?= htmlspecialchars($project['name']) ?>">
-
                    <div class="project-info">
                        <span class="project-category">
                            <?= htmlspecialchars($project['category_name']) ?>
@@ -225,7 +224,32 @@
        </div>
    </section>
 
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
 
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href").includes(current)) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
 
 
     <?php include 'partials/footer.php'; ?>
