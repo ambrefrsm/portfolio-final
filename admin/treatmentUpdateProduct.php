@@ -61,6 +61,7 @@ if(isset($_POST['nom']))
     }else{
         $description = ($_POST['description']);
     }
+    $figma_link = $_POST['figma_link'] ?? null;
 
     if(empty($_POST['categorie']))
     {
@@ -124,13 +125,14 @@ if(isset($_POST['nom']))
                     /**
                      * @var $bdd PDO
                      */
-                    $update = $bdd->prepare("UPDATE products SET name=:nom, date=:date, category=:category, description=:descri, cover=:img WHERE id = :myid");
+                    $update = $bdd->prepare("UPDATE products SET name=:nom, date=:date, category=:category, description=:descri, cover=:img, figma_link=:figma WHERE id = :myid");
                     $update->execute([
                         ":nom" => $nom,
                         ":date"=>$date,
                         ":category"=>$categorie,
                         ":descri"=>$description,
                         ":img"=>$uniqnomSsafe,
+                        ":figma"=>$figma_link,
                         ":myid"=>$id
                     ]);
                        if($extension == ".jpg")
@@ -157,12 +159,13 @@ if(isset($_POST['nom']))
         }elseif($_FILES['cover']['error'] == 4) // tu n'as pas envoyé d'image
         {
           // update sans image
-            $update = $bdd->prepare("UPDATE products SET name=:nom, date=:date, category=:category, description=:descri WHERE id = :myid");
+            $update = $bdd->prepare("UPDATE products SET name=:nom, date=:date, category=:category, description=:descri, figma_link=:figma WHERE id = :myid");
             $update->execute([
                 ":nom" => $nom,
                 ":date"=>$date,
                 ":category"=>$categorie,
                 ":descri"=>$description,
+                ":figma"=>$figma_link,
                 ":myid"=>$id
             ]);
             header("LOCATION:products.php?update=".$id);

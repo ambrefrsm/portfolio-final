@@ -154,7 +154,12 @@
        <div class="project-grid">
            <?php foreach ($projects as $project): ?>
                <article class="project-card">
-                   <img src="images/<?= htmlspecialchars($project['cover']) ?>" alt="<?= htmlspecialchars($project['name']) ?>">
+                   <img
+                       src="images/<?= htmlspecialchars($project['cover']) ?>"
+                       alt="<?= htmlspecialchars($project['name']) ?>"
+                       class="project-image"
+                       onclick="openModal(this.src)"
+                   >
                    <div class="project-info">
                        <span class="project-category">
                            <?= htmlspecialchars($project['category_name']) ?>
@@ -195,7 +200,7 @@
 
                    <div>
                        <span>COLLABORATION</span>
-                       <p>Ouvert aux projets freelance</p>
+                       <p>Disponible pour un poste en design</p>
                    </div>
                </div>
            </div>
@@ -224,6 +229,34 @@
        </div>
    </section>
 
+   <div id="imageModal" class="image-modal">
+
+       <span class="close-modal" onclick="closeModal()">
+           ×
+       </span>
+
+       <img id="modalImage">
+
+   </div>
+
+   <script>
+
+   function openModal(src) {
+
+       document.getElementById("imageModal").style.display = "flex";
+
+       document.getElementById("modalImage").src = src;
+   }
+
+   function closeModal() {
+
+       document.getElementById("imageModal").style.display = "none";
+   }
+
+   </script>
+
+<?php include 'partials/footer.php'; ?>
+
 <script>
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -234,7 +267,6 @@ window.addEventListener("scroll", () => {
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 120;
-        const sectionHeight = section.offsetHeight;
 
         if (scrollY >= sectionTop) {
             current = section.getAttribute("id");
@@ -250,6 +282,3 @@ window.addEventListener("scroll", () => {
     });
 });
 </script>
-
-
-    <?php include 'partials/footer.php'; ?>

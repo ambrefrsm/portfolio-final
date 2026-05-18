@@ -48,41 +48,74 @@ $projects = $reqProjects->fetchAll(PDO::FETCH_ASSOC);
     <div class="project-grid">
         <?php foreach ($projects as $project): ?>
 
-            <a href="product.php?id=<?= $project['id'] ?>" class="project-card-link">
+            <article class="project-card">
 
-                <article class="project-card">
+                <img
+                    src="images/<?= htmlspecialchars($project['cover']) ?>"
+                    alt="<?= htmlspecialchars($project['name']) ?>"
+                    class="project-image"
+                    onclick="openModal(this.src)"
+                >
 
-                    <img
-                        src="images/<?= htmlspecialchars($project['cover']) ?>"
-                        alt="<?= htmlspecialchars($project['name']) ?>"
-                    >
+                <div class="project-info">
 
-                    <div class="project-info">
+                    <span class="project-category">
+                        <?= htmlspecialchars($project['category_name']) ?>
+                    </span>
 
-                        <span class="project-category">
-                            <?= htmlspecialchars($project['category_name']) ?>
-                        </span>
+                    <h3>
+                        <?= htmlspecialchars($project['name']) ?>
+                    </h3>
 
-                        <h3>
-                            <?= htmlspecialchars($project['name']) ?>
-                        </h3>
+                    <p>
+                        <?= htmlspecialchars($project['description']) ?>
+                    </p>
 
-                        <p>
-                            <?= htmlspecialchars($project['description']) ?>
-                        </p>
 
-                        <div class="project-date">
-                            <?= date('F Y', strtotime($project['date'])) ?>
-                        </div>
+                    <?php if (!empty($project['figma_link'])): ?>
+                        <a
+                            href="<?= htmlspecialchars($project['figma_link']) ?>"
+                            target="_blank"
+                            class="project-link"
+                        >
+                            Voir le prototype
+                        </a>
+                    <?php endif; ?>
 
+                    <div class="project-date">
+                        <?= date('F Y', strtotime($project['date'])) ?>
                     </div>
 
-                </article>
-
-            </a>
+            </article>
 
         <?php endforeach; ?>
     </div>
 </section>
+
+<div id="imageModal" class="image-modal">
+
+    <span class="close-modal" onclick="closeModal()">
+        ×
+    </span>
+
+    <img id="modalImage">
+
+</div>
+
+<script>
+
+function openModal(src) {
+
+    document.getElementById("imageModal").style.display = "flex";
+
+    document.getElementById("modalImage").src = src;
+}
+
+function closeModal() {
+
+    document.getElementById("imageModal").style.display = "none";
+}
+
+</script>
 
 <?php include 'partials/footer.php'; ?>

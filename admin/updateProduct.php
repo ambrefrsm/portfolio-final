@@ -84,6 +84,14 @@ include("partials/nav.php");
                         <input type="date" id="date" name="date" class="form-control" value="<?= $don['date'] ?>">
                     </div>
                     <div class="form-group my-3">
+                    <label>Lien Figma</label>
+                    <input
+                        type="url"
+                        name="figma_link"
+                        value="<?= htmlspecialchars($product['figma_link'] ?? '') ?>"
+                    >
+                    </div>
+                    <div class="form-group my-3">
                         <label for="description">Description</label>
                         <textarea id="description" name="description" class="form-control"><?= $don['description'] ?></textarea>
                     </div>
