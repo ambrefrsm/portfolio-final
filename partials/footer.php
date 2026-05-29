@@ -37,7 +37,7 @@
 
             <h3>SUIVEZ-MOI !</h3>
 
-            <a href="#">
+            <a href="https://www.instagram.com/arts_ambre/">
                 <img src="images/instagram.png" alt="">
             </a>
 

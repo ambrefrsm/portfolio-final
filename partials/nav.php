@@ -16,11 +16,27 @@
         <img src="images/logo-noir.png" alt="Logo">
     </a>
 
-    <nav class="menu">
+    <nav class="menu" id="menu">
         <a href="index.php#home" class="nav-link">Accueil</a>
         <a href="index.php#about" class="nav-link">Présentation</a>
         <a href="index.php#skills" class="nav-link">Compétences</a>
         <a href="index.php#projects" class="nav-link">Projets</a>
         <a href="index.php#contact" class="nav-link">Contact</a>
     </nav>
+
+    <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </header>
+
+<script>
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
+
+burger.addEventListener("click", function () {
+    burger.classList.toggle("active");
+    menu.classList.toggle("active");
+});
+</script>
