@@ -38,7 +38,7 @@
         <div class="about-content">
 
             <div class="about-image">
-                <img src="images/.png" alt="Photo Ambre">
+                <img src="images/moi.png" alt="Photo Ambre">
             </div>
 
             <div class="about-text">
@@ -170,6 +170,15 @@
                        <h3><?= htmlspecialchars($project['name']) ?></h3>
 
                        <p><?= htmlspecialchars($project['description']) ?></p>
+                       <?php if (!empty($project['figma_link'])): ?>
+                           <a
+                               href="<?= htmlspecialchars($project['figma_link']) ?>"
+                               target="_blank"
+                               class="project-link"
+                           >
+                               Voir le prototype
+                           </a>
+                       <?php endif; ?>
 
                        <div class="project-date">
                            <?= date('F Y', strtotime($project['date'])) ?>
@@ -256,6 +265,7 @@
    }
 
    </script>
+
 
 <?php include 'partials/footer.php'; ?>
 

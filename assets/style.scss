@@ -72,6 +72,7 @@ body {
     min-height: calc(100vh - 59px);
     overflow: hidden;
     border-bottom: 2px solid black;
+
 }
 
 .hero {
@@ -246,15 +247,16 @@ body {
         border: 3px solid #f0009b;
         border-radius: 50%;
         overflow: hidden;
-        flex-shrink: 0;
-        margin-left: -10px;
+        position: relative;
+    }
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
+    .about-image img {
+        height: 140%;
+        width: auto;
+        position: absolute;
+        left: 50%;
+        bottom: -210px;
+        transform: translateX(-45%);
     }
 
     .about-text {
@@ -1024,66 +1026,170 @@ html {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
-    .burger {
-        display: flex;
+@media (max-width: 768px) {
+
+    /* NAVIGATION */
+
+    .navbar {
+        padding: 0 15px;
+
+        .menu {
+            display: none; // remplacé par ton menu burger
+        }
+    }
+
+    /* HERO */
+
+    .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        padding-bottom: 120px;
+    }
+
+    .pink-shape {
+        position: absolute !important;
+        width: 450px;
+        right: -35px;
+        bottom: 50px;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+
+        h1 {
+            font-size: 48px;
+            letter-spacing: 4px;
+            line-height: 1.1;
+        }
+
+        h2 {
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+    }
+
+    .buttons .btn {
+        padding: 6px 14px;
+        font-size: 10px;
+    }
+
+    .pink-shape path,
+    .pink-shape svg path {
+        animation: none !important;
+        stroke-dasharray: none !important;
+        stroke-dashoffset: 0 !important;
+    }
+
+    /* A PROPOS */
+
+    .about {
+        padding: 60px 20px;
+
+        .about-title {
+            font-size: 32px;
+            letter-spacing: 3px;
+            margin-bottom: 35px;
+        }
+
+        .about-content {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .about-image {
+            width: 170px;
+            height: 170px;
+            margin: 0 auto;
+        }
+
+        .about-image img {
+            height: 145%;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-45%);
+        }
+
+        .about-text {
+            max-width: 100%;
+            margin-left: 0;
+        }
+
+        .bloc {
+            padding-left: 15px;
+        }
+    }
+
+    /* COMPETENCES */
+
+    .skills {
+        padding: 60px 20px;
+    }
+
+    .skills-list {
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .skill {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    /* PROJETS */
+
+    .projects {
+        padding: 60px 20px;
+    }
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .project-card img {
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .project-card h3 {
+        font-size: 12px;
+    }
+
+    .project-card p {
+        font-size: 11px;
+    }
+
+    /* CONTACT */
+
+    .contact {
+        padding: 60px 20px;
+    }
+
+    .contact-content {
         flex-direction: column;
-        justify-content: space-between;
-        width: 32px;
-        height: 24px;
-        cursor: pointer;
-        z-index: 10001;
+        gap: 40px;
     }
 
-    .burger span {
+    .contact-form,
+    .contact-info {
         width: 100%;
-        height: 3px;
-        background: #000;
-        border-radius: 20px;
-        transition: 0.3s ease;
     }
 
-    .menu {
-        position: fixed;
-        top: 70px;
-        left: 0;
+    input,
+    textarea {
         width: 100%;
-        background: #000;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 24px;
-        padding: 35px 0;
-        transform: translateY(-150%);
-        transition: 0.4s ease;
-        z-index: 10000;
     }
 
-    .menu.active {
-        transform: translateY(0);
-    }
+    /* TITRES */
 
-    .menu a {
-        color: white;
-        font-size: 14px;
+    section h2 {
+        font-size: 28px;
         letter-spacing: 3px;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
-
-    .menu a:hover {
-        color: #ff00a8;
-    }
-
-    .burger.active span:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 7px);
-    }
-
-    .burger.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .burger.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(8px, -7px);
     }
 }
+
