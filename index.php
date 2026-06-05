@@ -18,7 +18,9 @@
                         DÉCOUVRIR MES PROJETS <span>→</span>
                     </a>
 
-                    <a href="cv.pdf" class="btn pink" target="_blank">
+                    <a href="images/cv-ambre.pdf"
+                       download
+                       class="btn pink">
                         MON CV
                     </a>
                 </div>
@@ -37,8 +39,10 @@
 
         <div class="about-content">
 
-            <div class="about-image">
-                <img src="images/moi.png" alt="Photo Ambre">
+            <div class="photo-wrapper">
+                <div class="about-image">
+                    <img src="images/moi.png" alt="Photo Ambre">
+                </div>
             </div>
 
             <div class="about-text">
@@ -293,4 +297,29 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+const wrapper = document.querySelector('.photo-wrapper');
+
+wrapper.addEventListener('mousemove', (e) => {
+
+    const rect = wrapper.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((x - centerX) / centerX) * 15;
+    const rotateY = ((y - centerY) / centerY) * -15;
+
+    wrapper.style.setProperty('--rotateX', `${rotateX}deg`);
+    wrapper.style.setProperty('--rotateY', `${rotateY}deg`);
+});
+
+wrapper.addEventListener('mouseleave', () => {
+    wrapper.style.setProperty('--rotateX', '0deg');
+    wrapper.style.setProperty('--rotateY', '0deg');
+});
 </script>
+
