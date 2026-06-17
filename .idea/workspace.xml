@@ -9,15 +9,8 @@
       <change beforePath="$PROJECT_DIR$/assets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/69fc86d8df701-IMG-7136.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/6a071bf890a34-affiche-paysage-IMPRESSION.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/6a071bf890a34-affiche-paysage-IMPRESSION.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/6a0dac22c4882-mockup-site-hollow-knight.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/devoir-7-Ambre-Fransman.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/mini_69fc86d8df701-IMG-7136.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/mini_6a071bf890a34-affiche-paysage-IMPRESSION.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/mini_6a0dac22c4882-mockup-site-hollow-knight.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/oomih.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/oomih.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/partials/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/nav.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +78,13 @@
       <workItem from="1779524634920" duration="6557000" />
       <workItem from="1780049779059" duration="6631000" />
       <workItem from="1780142075711" duration="6380000" />
-      <workItem from="1780660763248" duration="1324000" />
+      <workItem from="1780660763248" duration="5611000" />
+      <workItem from="1781182612489" duration="6218000" />
+      <workItem from="1781355542186" duration="2701000" />
+      <workItem from="1781438665727" duration="734000" />
+      <workItem from="1781443171687" duration="143000" />
+      <workItem from="1781508833210" duration="465000" />
+      <workItem from="1781509611606" duration="36000" />
     </task>
     <servers />
   </component>

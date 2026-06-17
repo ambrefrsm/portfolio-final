@@ -1,5 +1,6 @@
     <?php include 'partials/nav.php'; ?>
 
+
     <main class="home">
         <section class="hero" id="home">
 
@@ -322,4 +323,5 @@ wrapper.addEventListener('mouseleave', () => {
     wrapper.style.setProperty('--rotateY', '0deg');
 });
 </script>
-
+</body>
+</html>
