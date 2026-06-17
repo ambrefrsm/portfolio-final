@@ -8,9 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/partials/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/partials/nav.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +82,8 @@
       <workItem from="1781443171687" duration="143000" />
       <workItem from="1781508833210" duration="465000" />
       <workItem from="1781509611606" duration="36000" />
+      <workItem from="1781681185607" duration="40000" />
+      <workItem from="1781683853329" duration="332000" />
     </task>
     <servers />
   </component>
