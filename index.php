@@ -245,6 +245,8 @@
        </div>
    </section>
 
+
+
    <div id="imageModal" class="image-modal">
 
        <span class="close-modal" onclick="closeModal()">
@@ -254,6 +256,7 @@
        <img id="modalImage">
 
    </div>
+
 
    <script>
 

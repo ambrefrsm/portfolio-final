@@ -10,6 +10,7 @@
             <a href="#skills">Compétences</a>
             <a href="#projects">Projets</a>
             <a href="#contact">Contact</a>
+            <a href="mentions-legales.php">Mentions légales</a>
         </div>
 
         <div class="footer-column footer-infos">
@@ -30,6 +31,7 @@
                 <img src="images/clock-2.png" alt="">
                 <p>Réponses sous 24h</p>
             </div>
+
 
         </div>
 
